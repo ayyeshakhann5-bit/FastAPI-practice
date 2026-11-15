@@ -16,7 +16,7 @@ class Todo(BaseModel):
 @app.post("/todos")
 def create_todo(todo:Todo):
   todos.append(todo)
-  return {"message":"todo created successfully",
+  return {"message":"todo created successfully.",
           "data":todo}    
   
   
