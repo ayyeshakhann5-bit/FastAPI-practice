@@ -9,6 +9,9 @@ class Todo(BaseModel):
     id:int
     title:str
     completed:bool
+
+
+
     
 @app.post("/todos")
 def create_todo(todo:Todo):
@@ -46,4 +49,6 @@ def delete_todo(todo_id:int):
         if todo.id==todo_id:
             todos.pop(index)
             return {"message":"Data deleted successfully"} 
-    return "Error: NO data found"           
+    return "Error: NO data found"   
+
+        
