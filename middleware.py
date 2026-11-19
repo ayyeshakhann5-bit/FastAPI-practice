@@ -14,10 +14,10 @@ app=FastAPI()
 
 @app.middleware("http")
 async def log_middleware(request:Request,call_next):
-  start_time=time.time()
+  startt_time=time.time()
   responce=await call_next(request)
   
-  process_time=time.time()-start_time
+  process_time=time.time()-startt_time
   
   print(f"time:{process_time} | Path:{request.url.path}")
   
