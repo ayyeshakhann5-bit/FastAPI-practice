@@ -23,17 +23,16 @@ class Todo(Base):
   
 Base.metadata.create_all(bind=engine)
   
-  
+
 def get_db():
   db=sessionLocal()
   try:
     yield db
   finally:
     db.close()
-    
-@app.get("/")
-def home(db:Session=Depends(get_db)):
-  return {
-    "message":"DB Connected Fine.."
-  }
+      
+
+  
+  
+  
           
